@@ -55,8 +55,8 @@ def delete_user(user_id: int, db:db_dependency):
 @app.post("/send_invite")
 def send_invite():
     sender_email = "mohammedsabeeltc786@gmail.com"
-    # recipients = ["sabeelmohammedtc786@gmail.com","harikrishnansr007@gmail.com"]
-    recipients = ["shraddha@aviato.consulting","pooja@aviato.consulting","sabeelmohammedtc786@gmail.com","harikrishnansr007@gmail.com"]
+    recipients = ["sabeelmohammedtc786@gmail.com","harikrishnansr007@gmail.com"]
+    # recipients = ["shraddha@aviato.consulting","pooja@aviato.consulting"]
     subject = "API Documentation Invitation"
     body = """
             <html>
@@ -70,12 +70,10 @@ def send_invite():
                         <a href="https://crud-428709.el.r.appspot.com/redoc" style="display: inline-block; padding: 15px 25px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px; font-size: 16px;">View API Documentation</a>
                     </div>
                     <p>As per the requirements, I have set up the API to handle user management for three different projects. The API supports the following operations:</p>
-                    <ul>
-                        <li>Create User</li>
-                        <li>List User Details</li>
-                        <li>Update User Details</li>
-                        <li>Delete User</li>
-                    </ul>
+                    <p>Create Use</p>
+                    <p>List User Details</p>
+                    <p>Update User Details</p>
+                    <p>Delete User</p>
                     <p>I have also set up a GCP free tier account for deployment and GCP Postgres for the database.</p>
                     <p>I appreciate your time and look forward to your feedback.</p>
                     <div style="background-color: #3971e0; color: white; text-align: center; padding: 20px; border-radius: 5px; margin-top: 20px;">
