@@ -52,52 +52,81 @@ def delete_user(user_id: int, db:db_dependency):
 
 
 
-@app.post("/send_invite", tags=["Send mail"])
+@app.post("/send_invite")
 def send_invite():
     sender_email = "mohammedsabeeltc786@gmail.com"
     recipients = ["sabeelmohammedtc786@gmail.com"]
     # recipients = ["shraddha@aviato.consulting", "pooja@aviato.consulting"]
     subject = "API Documentation Invitation"
+#     body = """
+#     <html>
+#     <body>
+#         <div
+#             style="width: 600px; margin: auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f4f4f4; border: 1px solid #ddd;">
+#             <h1
+#                 style="background-color: #3971e0; color: white; padding: 10px 0; text-align: center;">API
+#                 Documentation Invitation</h1>
+#             <p>Hello,</p>
+#             <p>I have excited to invite you to view my User Management API
+#                 documentation on <strong>ReDoc</strong>.</p>
+#             <p>You can access the documentation by clicking the button
+#                 below:</p>
+#             <a href="https://crud-428709.el.r.appspot.com/redoc"
+#                 style="display: inline-block; padding: 10px 20px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px;">View
+#                 API Documentation</a>
+#             <p>As per the requirements, I have set up the API to handle user
+#                 management for three different projects. The API supports the
+#                 following operations:</p>
+#             <ul>
+#                 <li>Api For Creating User</li>
+#                 <li>Api Listing User Details</li>
+#                 <li>Api For Updating User Details</li>
+#                 <li>Api For Deleting User</li>
+#             </ul>
+#             <p>I have also set up a GCP free tier account for deployment and GCP
+#                 Postgres for the database.</p>
+#             <p>I have appreciate your time and look forward to your
+#                 feedback.</p>
+#             <div
+#                 style="width: 500px;background-color: #3971e0; margin: auto; padding: 20px; font-family: Arial, sans-serif; backgro border: 1px solid #ddd; color:white;text-align:center;">
+#                 <p style="font-size:13px;">Thank you,</p>
+#                 <p style="font-size:12px;">Mohammed Sabeel Tc</p>
+#                 <p style=" font-size: 12px;">If you have any questions, feel
+#                     free to reply to this <a href="mailto:mohammedsabeeltc786@gmail.com">mohammedsabeeltc786@gmail.com</a>.</p>
+#             </div>
+#         </div>
+#     </body>
+# </html>
+#     """
     body = """
-    <html>
-    <body>
-        <div
-            style="width: 600px; margin: auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f4f4f4; border: 1px solid #ddd;">
-            <h1
-                style="background-color: #3971e0; color: white; padding: 10px 0; text-align: center;">API
-                Documentation Invitation</h1>
-            <p>Hello,</p>
-            <p>I have excited to invite you to view my User Management API
-                documentation on <strong>ReDoc</strong>.</p>
-            <p>You can access the documentation by clicking the button
-                below:</p>
-            <a href="https://crud-428709.el.r.appspot.com/redoc"
-                style="display: inline-block; padding: 10px 20px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px;">View
-                API Documentation</a>
-            <p>As per the requirements, I have set up the API to handle user
-                management for three different projects. The API supports the
-                following operations:</p>
-            <ul>
-                <li>Api For Creating User</li>
-                <li>Api Listing User Details</li>
-                <li>Api For Updating User Details</li>
-                <li>Api For Deleting User</li>
-            </ul>
-            <p>I have also set up a GCP free tier account for deployment and GCP
-                Postgres for the database.</p>
-            <p>I have appreciate your time and look forward to your
-                feedback.</p>
-            <div
-                style="width: 500px;background-color: #3971e0; margin: auto; padding: 20px; font-family: Arial, sans-serif; backgro border: 1px solid #ddd; color:white;text-align:center;">
-                <p style="font-size:13px;">Thank you,</p>
-                <p style="font-size:12px;">Mohammed Sabeel Tc</p>
-                <p style=" font-size: 12px;">If you have any questions, feel
-                    free to reply to this <a href="mailto:mohammedsabeeltc786@gmail.com">mohammedsabeeltc786@gmail.com</a>.</p>
-            </div>
-        </div>
-    </body>
-</html>
-    """
+            <html>
+            <body>
+                <div style="width: 600px; margin: auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f4f4f4; border: 1px solid #ddd;">
+                    <h1 style="background-color: #3971e0; color: white; padding: 10px 0; text-align: center;">API Documentation Invitation</h1>
+                    <p>Hello,</p>
+                    <p>I am excited to invite you to view my User Management API documentation on <strong>ReDoc</strong>.</p>
+                    <p>You can access the documentation by clicking the button below:</p>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <a href="https://crud-428709.el.r.appspot.com/redoc" style="display: inline-block; padding: 15px 25px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px; font-size: 16px;">View API Documentation</a>
+                    </div>
+                    <p>As per the requirements, I have set up the API to handle user management for three different projects. The API supports the following operations:</p>
+                    <ul>
+                        <li>Create User</li>
+                        <li>List User Details</li>
+                        <li>Update User Details</li>
+                        <li>Delete User</li>
+                    </ul>
+                    <p>I have also set up a GCP free tier account for deployment and GCP Postgres for the database.</p>
+                    <p>I appreciate your time and look forward to your feedback.</p>
+                    <div style="background-color: #3971e0; color: white; text-align: center; padding: 20px; border-radius: 5px; margin-top: 20px;">
+                        <p style="font-size: 14px;">Thank you,</p>
+                        <p style="font-size: 16px;">Mohammed Sabeel Tc</p>
+                        <p style="font-size: 14px;">If you have any questions, feel free to reply to this email or contact me at <a href="mailto:mohammedsabeeltc786@gmail.com" style="color: white; text-decoration: underline;">mohammedsabeeltc786@gmail.com</a>.</p>
+                    </div>
+                </div>
+            </body>
+        </html>
+            """
 
     msg = MIMEMultipart("alternative")
     msg["From"] = sender_email
