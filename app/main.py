@@ -55,8 +55,8 @@ def delete_user(user_id: int, db:db_dependency):
 @app.post("/send_invite")
 def send_invite():
     sender_email = "mohammedsabeeltc786@gmail.com"
-    recipients = ["sabeelmohammedtc786@gmail.com"]
-    # recipients = ["shraddha@aviato.consulting","pooja@aviato.consulting"]
+    # recipients = ["sabeelmohammedtc786@gmail.com"]
+    recipients = ["shraddha@aviato.consulting","pooja@aviato.consulting"]
     subject = "API Documentation Invitation"
     body = """
             <html>
