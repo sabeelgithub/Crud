@@ -69,11 +69,7 @@ def send_invite():
                     <div style="text-align: center; margin: 20px 0;">
                         <a href="https://crud-428709.el.r.appspot.com/redoc" style="display: inline-block; padding: 15px 25px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px; font-size: 16px;">View API Documentation</a>
                     </div>
-                    <p>As per the requirements, I have set up the API to handle user management for three different projects. The API supports the following operations:</p>
-                    <p>Create Use</p>
-                    <p>List User Details</p>
-                    <p>Update User Details</p>
-                    <p>Delete User</p>
+                    <p>As per the requirements, I have set up the API to handle user management for three different projects.</p>
                     <p>I have also set up a GCP free tier account for deployment and GCP Postgres for the database.</p>
                     <p>I appreciate your time and look forward to your feedback.</p>
                     <div style="background-color: #3971e0; color: white; text-align: center; padding: 20px; border-radius: 5px; margin-top: 20px;">
