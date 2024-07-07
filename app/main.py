@@ -55,7 +55,7 @@ def delete_user(user_id: int, db:db_dependency):
 @app.post("/send_invite")
 def send_invite():
     sender_email = "mohammedsabeeltc786@gmail.com"
-    recipients = ["sabeelmohammedtc786@gmail.com","harikrishnansr007@gmail.com"]
+    recipients = ["sabeelmohammedtc786@gmail.com"]
     # recipients = ["shraddha@aviato.consulting","pooja@aviato.consulting"]
     subject = "API Documentation Invitation"
     body = """
@@ -69,9 +69,7 @@ def send_invite():
                     <div style="text-align: center; margin: 20px 0;">
                         <a href="https://crud-428709.el.r.appspot.com/redoc" style="display: inline-block; padding: 15px 25px; color: white; background-color: #3971e0; text-decoration: none; border-radius: 5px; font-size: 16px;">View API Documentation</a>
                     </div>
-                    <p>As per the requirements, I have set up the API to handle user management for three different projects.</p>
-                    <p>I have also set up a GCP free tier account for deployment and GCP Postgres for the database.</p>
-                    <p>I appreciate your time and look forward to your feedback.</p>
+                    <p>As per the requirements, I have set up the API to handle user management for three different projects,I have also set up a GCP free tier account for deployment and GCP Postgres for the database,I appreciate your time and look forward to your feedback.</p>
                     <div style="background-color: #3971e0; color: white; text-align: center; padding: 20px; border-radius: 5px; margin-top: 20px;">
                         <p style="font-size: 14px;">Thank you,</p>
                         <p style="font-size: 16px;">Mohammed Sabeel Tc</p>
